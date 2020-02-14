@@ -6,8 +6,8 @@ RUN mkdir -p "${APP_ROOT}/target"
 
 WORKDIR /app
 
-COPY eslint_entrypoint.sh package.json .eslintrc.json .prettierrc.json .eslintignore ./
+COPY docker_entrypoint.sh package.json .eslintrc.json .prettierrc.json .eslintignore ./
 
 RUN yarn install
 
-ENTRYPOINT [ "./eslint_entrypoint.sh" ]
+ENTRYPOINT [ "./docker_entrypoint.sh" ]
