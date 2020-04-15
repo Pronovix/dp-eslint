@@ -4,6 +4,5 @@ set -e
 
 TARGET="target/$@"
 
-cd target
-eslint $@
+eslint $TARGET
 exit $?
